@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <head>
-        <link rel="stylesheet" href="/final-polish.css?v=20260613f" />
+        <link rel="stylesheet" href="/final-polish.css?v=20260613g" />
       </head>
       <body>
         {children}

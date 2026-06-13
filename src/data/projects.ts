@@ -99,6 +99,11 @@ export const projects: Project[] = [
     palette: ["#fefaeb", "#73c9e6", "#5c5aa4", "#e84a94", "#0e101f"],
     gallery: [
       {
+        src: "/images/dopamine-radnice.webp",
+        alt: "Dopamine Tour Prague panorama",
+        caption: "Prague visual"
+      },
+      {
         src: "/images/dopamine-prague.webp",
         alt: "Dopamine Tour Prague visual",
         caption: "Prague visual"

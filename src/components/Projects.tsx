@@ -196,7 +196,7 @@ function getDetail(project: Project) {
 function imageFitClass(src: string, role: "hero" | "feature" | "gallery" = "gallery") {
   const coverHero = /radnice|lifestyle|prague|olbracht|moment|grow/i.test(src);
   const containedAsset =
-    /logo|desky|instagram|poradenstvi|book-your-hit|five-senses|sight|loyalty|pattern|menu|brand|visual|kit|packaging|symbol|banner|kettle|character|latte|mug|sandwich|bottle|prague/i.test(
+    /logo|desky|instagram|poradenstvi|book-your-hit|five-senses|sight|loyalty|pattern|menu|brand|visual|kit|packaging|symbol|banner|kettle|character|illustration|latte|mug|sandwich|bottle|prague|tower/i.test(
       src
     );
 
