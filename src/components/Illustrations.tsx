@@ -44,7 +44,7 @@ export function Illustrations() {
         <div className="ill-track">
           {illustrations.map((item) => (
             <figure className="ill-card" key={item.caption} data-cursor-label={item.caption}>
-              <img src={item.image} alt={item.caption} decoding="async" />
+              <img src={item.image} alt={item.caption} decoding="async" loading="lazy" />
               <figcaption>{item.caption}</figcaption>
             </figure>
           ))}

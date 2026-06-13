@@ -1,6 +1,11 @@
 import type { CSSProperties } from "react";
 import { projects, type Project } from "@/data/projects";
 
+const deferredImageProps = {
+  decoding: "async",
+  loading: "lazy"
+} as const;
+
 type Theme = {
   bg: string;
   fg: string;
@@ -238,9 +243,9 @@ export function Projects() {
               style={cssVars(project)}
             >
               <figure className="project-media">
-                <img className="project-card-image" src={baseImage} alt="" />
-                <img className="project-card-hover-image" src={hoverImage} alt="" loading="lazy" />
-                <img className="project-logo" src={project.logo} alt={`${project.name} logo`} />
+                <img className="project-card-image" src={baseImage} alt="" {...deferredImageProps} />
+                <img className="project-card-hover-image" src={hoverImage} alt="" {...deferredImageProps} />
+                <img className="project-logo" src={project.logo} alt={`${project.name} logo`} {...deferredImageProps} />
                 <span className="project-hover-label">Zobrazit projekt</span>
               </figure>
               <div className="project-meta">
@@ -294,7 +299,7 @@ function ProjectOverlay({ project }: { project: Project }) {
           </div>
 
           <figure className={`detail-hero-media ${imageFitClass(project.hero, "hero")}`}>
-            <img src={project.hero} alt={`${project.name} hlavní vizuál`} />
+            <img src={project.hero} alt={`${project.name} hlavní vizuál`} {...deferredImageProps} />
           </figure>
 
           <div className="tag-row detail-tags">
@@ -324,7 +329,7 @@ function ProjectOverlay({ project }: { project: Project }) {
           <h3>{detail.systemTitle}</h3>
           {feature ? (
             <figure className={`detail-feature-media ${imageFitClass(feature.src, "feature")}`}>
-              <img src={feature.src} alt={feature.alt} />
+              <img src={feature.src} alt={feature.alt} {...deferredImageProps} />
             </figure>
           ) : null}
         </section>
@@ -358,7 +363,7 @@ function ProjectOverlay({ project }: { project: Project }) {
           <div className="detail-gallery-grid">
             {gallery.map((item, index) => (
               <figure key={item.src} className={`${index % 3 === 0 ? "is-wide" : ""} ${imageFitClass(item.src)}`}>
-                <img src={item.src} alt={item.alt} />
+                <img src={item.src} alt={item.alt} {...deferredImageProps} />
                 <figcaption>{item.caption}</figcaption>
               </figure>
             ))}

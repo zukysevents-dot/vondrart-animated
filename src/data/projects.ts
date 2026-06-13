@@ -146,7 +146,7 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Logo System", "Visual System", "Social Media", "Brand Applications"],
     logo: "/images/syndikat-legal-logo.png",
-    hero: "/images/syndikat-legal-desky.png",
+    hero: "/images/syndikat-legal-desky.webp",
     cardImage: "/images/syndikat-legal-pravni-jistota.webp",
     palette: ["#072924", "#b9dcc6", "#eef5f1"],
     gallery: [
@@ -188,8 +188,8 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Illustration", "Social Media"],
     logo: "/images/dvorek-logo.png",
-    hero: "/images/dvorek-brand.png",
-    cardImage: "/images/dvorek-menu.png",
+    hero: "/images/dvorek-brand.webp",
+    cardImage: "/images/dvorek-menu.webp",
     palette: ["#d2360f", "#fff4df", "#1d1d1b"],
     gallery: [
       {
@@ -208,7 +208,7 @@ export const projects: Project[] = [
         caption: "Latte"
       },
       {
-        src: "/images/dvorek-loyalty-card.png",
+        src: "/images/dvorek-loyalty-card.webp",
         alt: "Dvorek loyalty card",
         caption: "Věrnostní karta"
       },
@@ -265,7 +265,7 @@ export const projects: Project[] = [
         caption: "T-shirt"
       },
       {
-        src: "/images/houby-space-bottle.png",
+        src: "/images/houby-space-bottle.webp",
         alt: "houby.space product bottle",
         caption: "Product"
       }
@@ -288,16 +288,16 @@ export const projects: Project[] = [
     services: ["Brand Identity", "Illustration", "Social Media"],
     logo: "/images/cafe-olbracht-logo.png",
     hero: "/images/cafe-olbracht-main.jpg",
-    cardImage: "/images/cafe-olbracht-cup.png",
+    cardImage: "/images/cafe-olbracht-cup.webp",
     palette: ["#fdf1d3", "#6a5652", "#cfdfbc", "#181818"],
     gallery: [
       {
-        src: "/images/cafe-olbracht-aprons.png",
+        src: "/images/cafe-olbracht-aprons.webp",
         alt: "Café Olbracht aprons",
         caption: "Zástěry"
       },
       {
-        src: "/images/cafe-olbracht-cup.png",
+        src: "/images/cafe-olbracht-cup.webp",
         alt: "Café Olbracht cup",
         caption: "Kelímek"
       },
@@ -329,7 +329,7 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Logo System", "Color System", "Campaigns"],
     logo: "/images/co-ty-ploty-logo.png",
-    hero: "/images/co-ty-ploty-banner.png",
+    hero: "/images/co-ty-ploty-banner.webp",
     cardImage: "/images/co-ty-ploty-symbol-logo.png",
     palette: ["#f0ede4", "#004643"],
     gallery: [
@@ -344,7 +344,7 @@ export const projects: Project[] = [
         caption: "Symbol"
       },
       {
-        src: "/images/co-ty-ploty-banner.png",
+        src: "/images/co-ty-ploty-banner.webp",
         alt: "Co ty ploty advertising banner",
         caption: "Reklamní banner"
       }
