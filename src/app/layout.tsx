@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs">
+      <head>
+        <link rel="stylesheet" href="/final-polish.css?v=20260613f" />
+      </head>
       <body>
         {children}
         <Script src="/site-interactions.js" strategy="afterInteractive" />

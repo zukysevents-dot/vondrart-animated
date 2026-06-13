@@ -1307,3 +1307,264 @@ main {
     font-size: clamp(4.15rem, 4.65vw, 5.75rem);
   }
 }
+
+.detail-copy h2 {
+  white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+  .detail-copy h2,
+  .detail-bonghemia .detail-copy h2,
+  .detail-dopamine-tour .detail-copy h2,
+  .detail-dvorek .detail-copy h2,
+  .detail-houby-space .detail-copy h2,
+  .detail-cafe-olbracht .detail-copy h2,
+  .detail-cotyploty .detail-copy h2,
+  .detail-syndikat-legal .detail-copy h2 {
+    max-width: 100%;
+    font-size: clamp(2.05rem, 8.4vw, 4.15rem);
+  }
+}
+
+/* Responsive handoff polish: keep the studio-style detail pages clean on narrow desktop and mobile widths. */
+@media (max-width: 1180px) {
+  .project-overlay {
+    padding: clamp(8px, 2vw, 20px);
+  }
+
+  .project-overlay .overlay-panel,
+  .detail-panel {
+    width: min(100%, calc(100vw - 16px));
+    overflow-x: hidden;
+  }
+
+  .detail-hero,
+  .detail-bonghemia .detail-hero,
+  .detail-dopamine-tour .detail-hero,
+  .detail-dvorek .detail-hero,
+  .detail-houby-space .detail-hero,
+  .detail-cafe-olbracht .detail-hero,
+  .detail-cotyploty .detail-hero,
+  .detail-syndikat-legal .detail-hero {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: clamp(22px, 4vw, 42px);
+    min-height: 0;
+    padding: clamp(54px, 7vw, 78px) clamp(24px, 5vw, 46px) clamp(42px, 6vw, 58px);
+  }
+
+  .detail-copy,
+  .detail-bonghemia .detail-copy,
+  .detail-dopamine-tour .detail-copy,
+  .detail-dvorek .detail-copy,
+  .detail-houby-space .detail-copy,
+  .detail-cafe-olbracht .detail-copy,
+  .detail-cotyploty .detail-copy,
+  .detail-syndikat-legal .detail-copy {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .detail-copy h2,
+  .detail-bonghemia .detail-copy h2,
+  .detail-dopamine-tour .detail-copy h2,
+  .detail-dvorek .detail-copy h2,
+  .detail-houby-space .detail-copy h2,
+  .detail-cafe-olbracht .detail-copy h2,
+  .detail-cotyploty .detail-copy h2,
+  .detail-syndikat-legal .detail-copy h2 {
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(2.1rem, 7.4vw, 4.7rem);
+    line-height: 0.94;
+  }
+
+  .detail-syndikat-legal .detail-copy h2 {
+    font-size: clamp(2.2rem, 7vw, 4.45rem);
+  }
+
+  .detail-lead,
+  .detail-dopamine-tour .detail-lead,
+  .detail-syndikat-legal .detail-lead {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .detail-hero-media,
+  .detail-bonghemia .detail-hero-media,
+  .detail-dopamine-tour .detail-hero-media,
+  .detail-dvorek .detail-hero-media,
+  .detail-houby-space .detail-hero-media,
+  .detail-cafe-olbracht .detail-hero-media,
+  .detail-cotyploty .detail-hero-media,
+  .detail-syndikat-legal .detail-hero-media {
+    justify-self: stretch;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 0;
+    margin-top: 0;
+  }
+
+  .detail-hero-media img,
+  .detail-feature-media img {
+    height: clamp(280px, 48vw, 520px);
+    min-height: 0;
+  }
+
+  .detail-hero-media.is-contained img,
+  .detail-feature-media.is-contained img,
+  .detail-gallery-grid .is-contained img {
+    object-fit: contain;
+  }
+
+  .detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    margin-top: 4px;
+    padding-top: 0;
+  }
+
+  .detail-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    gap: 18px 28px;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .detail-section,
+  .detail-story,
+  .detail-gallery-section {
+    padding-right: clamp(24px, 5vw, 46px);
+    padding-left: clamp(24px, 5vw, 46px);
+  }
+
+  .detail-section h3,
+  .detail-story h3,
+  .detail-gallery-section h3 {
+    max-width: 100%;
+    font-size: clamp(2.45rem, 8.6vw, 5.15rem);
+    line-height: 0.95;
+  }
+
+  .detail-feature-media,
+  .detail-gallery-grid figure {
+    border-radius: 16px;
+  }
+
+  .detail-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .detail-gallery-grid figure,
+  .detail-gallery-grid figure.is-wide {
+    grid-column: auto;
+  }
+
+  .detail-gallery-grid img,
+  .detail-gallery-grid figure.is-wide img {
+    height: clamp(280px, 58vw, 520px);
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .detail-hero,
+  .detail-bonghemia .detail-hero,
+  .detail-dopamine-tour .detail-hero,
+  .detail-dvorek .detail-hero,
+  .detail-houby-space .detail-hero,
+  .detail-cafe-olbracht .detail-hero,
+  .detail-cotyploty .detail-hero,
+  .detail-syndikat-legal .detail-hero,
+  .detail-section,
+  .detail-story,
+  .detail-gallery-section {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .detail-copy h2,
+  .detail-bonghemia .detail-copy h2,
+  .detail-dopamine-tour .detail-copy h2,
+  .detail-dvorek .detail-copy h2,
+  .detail-houby-space .detail-copy h2,
+  .detail-cafe-olbracht .detail-copy h2,
+  .detail-cotyploty .detail-copy h2,
+  .detail-syndikat-legal .detail-copy h2 {
+    font-size: clamp(1.8rem, 8.8vw, 3.65rem);
+  }
+
+  .detail-syndikat-legal .detail-copy h2 {
+    font-size: clamp(1.7rem, 8.1vw, 3.25rem);
+  }
+
+  .detail-lead,
+  .detail-story-copy {
+    font-size: 1rem;
+    line-height: 1.48;
+  }
+
+  .detail-hero-media img,
+  .detail-feature-media img,
+  .detail-gallery-grid img,
+  .detail-gallery-grid figure.is-wide img {
+    height: clamp(250px, 60vw, 420px);
+  }
+
+  .detail-meta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 460px) {
+  .detail-copy h2,
+  .detail-bonghemia .detail-copy h2,
+  .detail-dopamine-tour .detail-copy h2,
+  .detail-dvorek .detail-copy h2,
+  .detail-houby-space .detail-copy h2,
+  .detail-cafe-olbracht .detail-copy h2,
+  .detail-cotyploty .detail-copy h2,
+  .detail-syndikat-legal .detail-copy h2 {
+    font-size: clamp(1.45rem, 8vw, 2.25rem);
+  }
+
+  .detail-tags span,
+  .detail-meta-grid dt,
+  .detail-meta-grid dd {
+    font-size: 0.72rem;
+  }
+}
+
+.project-card h3 {
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body,
+  body * {
+    cursor: none !important;
+  }
+
+  .cursor {
+    display: block !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  html,
+  body,
+  body * {
+    cursor: auto !important;
+  }
+
+  .cursor {
+    display: none !important;
+  }
+}
