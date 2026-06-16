@@ -2714,3 +2714,40 @@ body.bng-project-open [class*="cursor"]{
   padding:clamp(16px,2vw,28px)!important;
   background:#4A6C5D!important;
 }
+
+/* final-heading-capslock */
+#dopamine-vondrart-overlay .dt-title,
+#dopamine-vondrart-overlay .dt-heading,
+#dopamine-vondrart-overlay .dt-closing h3,
+#syndikat-vondrart-overlay .sl-title,
+#syndikat-vondrart-overlay .sl-heading,
+#syndikat-vondrart-overlay .sl-closing h3,
+#dvorek-vondrart-overlay .dv-title,
+#dvorek-vondrart-overlay .dv-heading,
+#dvorek-vondrart-overlay .dv-closing h3,
+#houby-vondrart-overlay .hb-title,
+#houby-vondrart-overlay .hb-heading,
+#houby-vondrart-overlay .hb-closing h3,
+#olbracht-vondrart-overlay .ob-title,
+#olbracht-vondrart-overlay .ob-heading,
+#cotyploty-vondrart-overlay .cp-title,
+#cotyploty-vondrart-overlay .cp-heading,
+#cotyploty-vondrart-overlay .cp-closing h3,
+#bonghemia-vondrart-overlay .bng-title,
+#bonghemia-vondrart-overlay .bng-h2,
+#bonghemia-vondrart-overlay .bng-photo-head h2,
+#bonghemia-vondrart-overlay .bng-product-intro h2,
+#bonghemia-vondrart-overlay .bng-lifestyle-title h3,
+#bonghemia-vondrart-overlay .bng-footer b{
+  text-transform:uppercase!important;
+}
+
+@media (max-width:760px){
+  #syndikat-vondrart-overlay .sl-title{
+    max-width:100%!important;
+    white-space:nowrap!important;
+    font-size:clamp(34px,10.6vw,48px)!important;
+    letter-spacing:-.055em!important;
+    line-height:.9!important;
+  }
+}

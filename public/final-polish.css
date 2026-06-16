@@ -950,6 +950,17 @@
   letter-spacing: 0 !important;
 }
 
+/* Client note: keep regular headings in caps lock, matching the illustrations title. */
+.section-head h2,
+.service-item h3,
+.project-card h3,
+.collab-item h3,
+.ill-title,
+.about-section h2,
+.contact-section h2 {
+  text-transform: uppercase !important;
+}
+
 @media (max-width: 760px) {
   .ill-title-row {
     gap: 18px !important;
