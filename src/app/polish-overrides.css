@@ -65,7 +65,7 @@
   position: absolute;
   border-radius: 50%;
   transform: translate3d(0, 0, 0);
-  will-change: transform;
+  will-change: transform, opacity;
 }
 
 .blob-a {
@@ -82,7 +82,7 @@
   );
   filter: blur(46px);
   opacity: 0.88;
-  animation: floatA 18s ease-in-out infinite;
+  animation: floatA 22s ease-in-out infinite;
 }
 
 .blob-b {
@@ -93,7 +93,7 @@
   background: radial-gradient(circle, #6d28d9 0%, #4c1d95 50%, rgba(76, 29, 149, 0) 70%);
   filter: blur(52px);
   opacity: 0.38;
-  animation: floatB 24s ease-in-out infinite;
+  animation: floatB 28s ease-in-out infinite;
 }
 
 .blob-c {
@@ -104,7 +104,7 @@
   background: radial-gradient(circle, #fb7185 0%, #e11d48 60%, rgba(225, 29, 72, 0) 70%);
   filter: blur(36px);
   opacity: 0.28;
-  animation: floatC 21s ease-in-out infinite;
+  animation: floatC 25s ease-in-out infinite;
 }
 
 .hero-content {
@@ -428,40 +428,67 @@
   transform: none;
 }
 
+/* Aurora — bohatý organický DRIFT (translate) + pulz přes OPACITY dech.
+   Záměrně BEZ scale/rotate: u rozmazaných blobů by to nutilo re-raster bluru
+   každý frame (drahé). Translate + opacity běží na kompozitoru → plynulé na GPU. */
 @keyframes floatA {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.84;
   }
-
+  25% {
+    transform: translate3d(-46px, 56px, 0);
+    opacity: 0.97;
+  }
   50% {
-    transform: translate3d(-40px, 50px, 0) scale(1.05);
+    transform: translate3d(-72px, 24px, 0);
+    opacity: 0.78;
+  }
+  75% {
+    transform: translate3d(28px, 64px, 0);
+    opacity: 0.93;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.84;
   }
 }
 
 @keyframes floatB {
-  0%,
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.32;
+  }
+  30% {
+    transform: translate3d(60px, -50px, 0);
+    opacity: 0.48;
+  }
+  60% {
+    transform: translate3d(34px, -78px, 0);
+    opacity: 0.26;
+  }
   100% {
     transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    transform: translate3d(30px, -40px, 0) scale(0.95);
+    opacity: 0.32;
   }
 }
 
 @keyframes floatC {
-  0%,
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.24;
+  }
+  33% {
+    transform: translate3d(-40px, 48px, 0);
+    opacity: 0.42;
+  }
+  66% {
+    transform: translate3d(44px, -34px, 0);
+    opacity: 0.2;
+  }
   100% {
     transform: translate3d(0, 0, 0);
-  }
-
-  33% {
-    transform: translate3d(-20px, 30px, 0);
-  }
-
-  66% {
-    transform: translate3d(20px, -20px, 0);
+    opacity: 0.24;
   }
 }
 
