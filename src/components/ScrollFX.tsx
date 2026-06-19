@@ -151,6 +151,9 @@ export function ScrollFX() {
         parallaxItems.push({ el, speed, base: 0 });
       });
     };
+    // Celý abstrakt (aurora) jede se scrollem — výrazný parallax. Translate-only
+    // (žádný scale/rotate) → GPU posune hotovou vrstvu, blur se nepřerasteruje.
+    collect(".hero-mesh", 0.26);
     collect(".dot-grid", 0.08);
     collect(".hero-side-label", 0.12);
 

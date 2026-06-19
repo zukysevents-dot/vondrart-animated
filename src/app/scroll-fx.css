@@ -11,6 +11,21 @@ html.scroll-fx-ready {
   scroll-behavior: auto;
 }
 
+/* ============================================================
+   HLAVNÍ FONT WEBU — Neue Haas Grotesk (jednotně).
+   Projektové case-study overlaye si ponechávají svoje brandové fonty.
+   Fallback je Helvetica Neue (přímý příbuzný Neue Haas Grotesk); až se
+   přidá Adobe Fonts kit / lokální soubory, web je automaticky použije.
+   ============================================================ */
+:root {
+  --font-neue-haas: "Neue Haas Grotesk Display Pro", "Neue Haas Grotesk Text Pro",
+    "NeueHaasGrotesk", "Neue Haas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body,
+body :not(.project-overlay):not(.project-overlay *) {
+  font-family: var(--font-neue-haas) !important;
+}
+
 /* ------------------------- REVEAL ------------------------- */
 /* Jednotná, ucelená animace. Plynulý decelerující easing (expo-out),
    jemný stagger (--rv-i krok 80ms). Vše opacity + transform (kompozitor). */
