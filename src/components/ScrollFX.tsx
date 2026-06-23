@@ -255,8 +255,12 @@ export function ScrollFX() {
         ? HUE_TOP + (p / 0.5) * (HUE_MID - HUE_TOP)
         : HUE_MID + ((p - 0.5) / 0.5) * (HUE_BOTTOM - HUE_MID);
 
-    const auroraTarget = { tx: 0, ty: 0, sc: 1, op: 1 };
-    const auroraCurr = { tx: 0, ty: 0, sc: 1, op: 1 };
+    // POZN. k výkonu: .hero-mesh dostává z JS jen translate3d (houpání L↔R) + opacity —
+    // obojí je kompozitované (GPU), žádný repaint. „Dýchání" (scale) řeší CSS animace
+    // floatA/B/C přímo na blobech (vlastní GPU vrstvy). Scale jsme z JS ODSTRANILI: scale
+    // na nepromovaném .hero-mesh přerastroval velké gradienty každý frame → sekání.
+    const auroraTarget = { tx: 0, ty: 0, op: 1 };
+    const auroraCurr = { tx: 0, ty: 0, op: 1 };
     let auroraRAF = 0;
     const computeAuroraTarget = () => {
       if (!aurora) return;
@@ -265,11 +269,8 @@ export function ScrollFX() {
       const vw = window.innerWidth;
       const max = Math.max(1, document.documentElement.scrollHeight - vh);
       const p = Math.min(1, Math.max(0, sy / max)); // 0..1 průběh scrollu
-      // Pomalé, klidné houpání L↔R (1 cyklus přes celý web) + výrazné, pomalé
-      // a dobře viditelné nafukování/vyfukování (dýchání).
       auroraTarget.tx = -Math.sin(p * Math.PI * 2) * (vw * 0.3); // houpání ±30vw, nejdřív výrazně doleva
       auroraTarget.ty = p * vh * 0.35; // jemný drift dolů s obsahem
-      auroraTarget.sc = 1.18 + Math.sin(p * Math.PI * 3) * 0.34; // tep ~0.84–1.52×, pomalu
       const dim = Math.min(1, Math.max(0, (sy - vh * 0.4) / (vh * 0.7)));
       auroraTarget.op = 1 - dim * 0.62; // 1 → ~0.38 (čitelnost obsahu)
     };
@@ -278,16 +279,12 @@ export function ScrollFX() {
       const e = 0.08; // lerp faktor → hedvábné dotahování k cíli
       auroraCurr.tx += (auroraTarget.tx - auroraCurr.tx) * e;
       auroraCurr.ty += (auroraTarget.ty - auroraCurr.ty) * e;
-      auroraCurr.sc += (auroraTarget.sc - auroraCurr.sc) * e;
       auroraCurr.op += (auroraTarget.op - auroraCurr.op) * e;
-      aurora.style.transform = `translate3d(${auroraCurr.tx.toFixed(2)}px, ${auroraCurr.ty.toFixed(
-        2
-      )}px, 0) scale(${auroraCurr.sc.toFixed(4)})`;
+      aurora.style.transform = `translate3d(${auroraCurr.tx.toFixed(2)}px, ${auroraCurr.ty.toFixed(2)}px, 0)`;
       aurora.style.opacity = auroraCurr.op.toFixed(3);
       const settled =
         Math.abs(auroraTarget.tx - auroraCurr.tx) < 0.1 &&
         Math.abs(auroraTarget.ty - auroraCurr.ty) < 0.1 &&
-        Math.abs(auroraTarget.sc - auroraCurr.sc) < 0.001 &&
         Math.abs(auroraTarget.op - auroraCurr.op) < 0.002;
       auroraRAF = settled ? 0 : window.requestAnimationFrame(auroraTick);
     };

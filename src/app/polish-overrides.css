@@ -106,7 +106,6 @@
     rgba(76, 29, 149, 0.22) 60%,
     rgba(76, 29, 149, 0) 78%
   );
-  filter: blur(6px);
   opacity: 0.52;
   animation: floatB 28s ease-in-out infinite;
 }
@@ -123,7 +122,6 @@
     rgba(225, 29, 72, 0.14) 64%,
     rgba(225, 29, 72, 0) 80%
   );
-  filter: blur(6px);
   opacity: 0.42;
   animation: floatC 25s ease-in-out infinite;
 }
@@ -450,9 +448,11 @@
   transform: none;
 }
 
-/* Aurora — bohatý organický DRIFT (translate) + pulz přes OPACITY dech.
-   Záměrně BEZ scale/rotate: u rozmazaných blobů by to nutilo re-raster bluru
-   každý frame (drahé). Translate + opacity běží na kompozitoru → plynulé na GPU. */
+/* Aurora — organický DRIFT (translate) + „dech" přes OPACITY (jas pulzuje).
+   ZÁMĚRNĚ BEZ scale: škálování velkých CSS-gradientních blobů je přerastruje (gradient
+   se překresluje) každý frame → sekání (ověřeno: se scale ~25 fps, bez scale ~49 fps).
+   Translate + opacity běží na kompozitoru (GPU) → plynulé. Houpání L↔R navíc řídí JS
+   (translate na .hero-mesh dle scrollu), barvu blob-a hue-rotate dle scrollu. */
 @keyframes floatA {
   0% {
     transform: translate3d(0, 0, 0);
