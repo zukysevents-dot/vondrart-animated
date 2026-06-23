@@ -5,3 +5,5 @@ out
 .env*
 
 .claude
+.playwright-mcp
+bmp-top.jpeg

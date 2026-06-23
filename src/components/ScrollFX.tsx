@@ -242,18 +242,9 @@ export function ScrollFX() {
     // opakované nafukování/vyfukování, řízené scrollem. Cílové hodnoty
     // dotahujeme lerpem v samostatném rAF loopu → hedvábný pohyb i při
     // rychlém scrollu. Loop se po ustálení sám zastaví.
-    // BARVA KOULE PODLE SCROLLU — růžová (nahoře) → oranžová (střed) → světlá modrá (dole).
-    // hue-rotate (CSS var --blob-hue) na hlavní kouli .blob-a (a intro kouli); base
-    // gradient je oranžová ~25°. 1. půlka rotace STOUPÁ (růžová→červená→oranžová), 2. půlka
-    // KLESÁ (oranžová→magenta→fialová→modrá) → záměrně se VYHÝBÁ zelené. Vše ladí dohromady.
-    // Hodnoty lze ladit (klient si může barvy doladit).
-    const HUE_TOP = 305; //   p=0   → neon růžová (displayed ~330°)
-    const HUE_MID = 360; //   p=0.5 → oranžová (≡ 0°, bez posunu)
-    const HUE_BOTTOM = 190; // p=1  → světlá neon modrá (displayed ~215°), přes magentu/fialovou
-    const scrollHue = (p: number) =>
-      p <= 0.5
-        ? HUE_TOP + (p / 0.5) * (HUE_MID - HUE_TOP)
-        : HUE_MID + ((p - 0.5) / 0.5) * (HUE_BOTTOM - HUE_MID);
+    // BARVA AURORY PODLE SCROLLU — 3 bitmapy (.blob-pink/blue/peach) se prolínají opacitou:
+    // neon růžová (nahoře) → světlá neon modrá (střed) → broskvová (dole). Opacity je
+    // kompozitovaná (GPU) → přechod je plynulý. Řídí updateAuroraColor() (CSS proměnné --au-*).
 
     // POZN. k výkonu: .hero-mesh dostává z JS jen translate3d (houpání L↔R) + opacity —
     // obojí je kompozitované (GPU), žádný repaint. „Dýchání" (scale) řeší CSS animace
@@ -291,20 +282,20 @@ export function ScrollFX() {
         Math.abs(auroraTarget.op - auroraCurr.op) < 0.002;
       auroraRAF = settled ? 0 : window.requestAnimationFrame(auroraTick);
     };
-    // BARVA koule (--blob-hue) je ODDĚLENÁ od lerp smyčky: aktualizuje se POUZE při
-    // reálném scrollu a kvantovaně na celé stupně. Když se nescrolluje, filtr na
-    // .blob-a se nemění → blob zůstává kompozitovaný (žádné přerastrování) → plynulý
-    // float. Hue-rotate jede jen na .blob-a (bez blur) → levné i během scrollu.
-    let lastHueDeg = -999;
-    const updateBlobHue = () => {
+    // Prolnutí 3 bitmap aurory dle scrollu (mimo lerp smyčku). Opacity = kompozitované,
+    // takže levné; kvantujeme po malých krocích p, ať zbytečně nesypeme styly.
+    let lastP = -1;
+    const clamp01 = (x: number) => (x < 0 ? 0 : x > 1 ? 1 : x);
+    const updateAuroraColor = () => {
       const vh = window.innerHeight;
       const max = Math.max(1, document.documentElement.scrollHeight - vh);
       const p = Math.min(1, Math.max(0, window.scrollY / max));
-      const deg = Math.round(scrollHue(p));
-      if (deg !== lastHueDeg) {
-        lastHueDeg = deg;
-        root.style.setProperty("--blob-hue", `${deg}deg`);
-      }
+      if (Math.abs(p - lastP) < 0.004) return;
+      lastP = p;
+      // trojúhelníkové prolnutí: růžová@0 → modrá@0.5 → broskvová@1
+      root.style.setProperty("--au-pink", clamp01(1 - 2 * p).toFixed(3));
+      root.style.setProperty("--au-blue", clamp01(1 - 2 * Math.abs(p - 0.5)).toFixed(3));
+      root.style.setProperty("--au-peach", clamp01(2 * p - 1).toFixed(3));
     };
     const kickAurora = () => {
       if (!aurora || reduceMotion) return;
@@ -327,7 +318,7 @@ export function ScrollFX() {
       window.requestAnimationFrame(() => {
         applyParallax();
         kickAurora();
-        updateBlobHue();
+        updateAuroraColor();
         ticking = false;
       });
     };
@@ -335,7 +326,7 @@ export function ScrollFX() {
     cleanups.push(() => window.removeEventListener("scroll", onScroll));
     applyParallax();
     kickAurora();
-    updateBlobHue();
+    updateAuroraColor();
 
     /* --------------------- KURZOR: MAGNET + 3D TILT ------------------------ */
     document

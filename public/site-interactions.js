@@ -5,7 +5,7 @@
   if (!cursor || coarse) return;
   const media = cursor.querySelector(".cursor-media");
   // prvky, nad kterými kurzor reaguje (klikatelné + ty s vlastním kurzor-obsahem)
-  const HOVER_SEL = "a, button, [data-cursor-label], [data-cursor-image]";
+  const HOVER_SEL = "a, button, [data-cursor-label], [data-cursor-image], [data-cursor-blur]";
 
   let frame = 0;
   let currentX = window.innerWidth / 2;
@@ -59,13 +59,20 @@
     const target = event.target && event.target.closest ? event.target.closest(HOVER_SEL) : null;
     if (!target) return;
     cursor.classList.add("is-active");
-    // kontextový obsah: prvek může nést vlastní obrázek (brand logo) přes data-cursor-image
+    // kontextový obsah kurzoru:
+    //  • data-cursor-blur → měkký „blur" disk (projekty; ŽÁDNÉ logo)
+    //  • data-cursor-image → brand logo (ponecháno pro případné jiné prvky)
     const img = target.getAttribute("data-cursor-image");
-    if (img && media) {
+    if (target.hasAttribute("data-cursor-blur")) {
+      cursor.classList.add("has-blur");
+      cursor.classList.remove("has-media");
+    } else if (img && media) {
       if (media.getAttribute("src") !== img) media.setAttribute("src", img);
       cursor.classList.add("has-media");
+      cursor.classList.remove("has-blur");
     } else {
       cursor.classList.remove("has-media");
+      cursor.classList.remove("has-blur");
     }
   }, { passive: true });
 
@@ -75,6 +82,7 @@
     if (target && next && next.closest && next.closest(HOVER_SEL) === target) return;
     cursor.classList.remove("is-active");
     cursor.classList.remove("has-media");
+    cursor.classList.remove("has-blur");
   }, { passive: true });
 
   // stisk myši → z kurzoru se stane barevná koule (uvolnění/odchod ji vrátí)

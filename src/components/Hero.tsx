@@ -3,7 +3,11 @@ export function Hero() {
     <section className="hero" id="top">
       <div className="dot-grid" aria-hidden="true" />
       <div className="hero-mesh" aria-hidden="true">
-        <div className="mesh-blob blob-a" />
+        <div className="mesh-blob blob-a">
+          <span className="blob-layer blob-pink" />
+          <span className="blob-layer blob-blue" />
+          <span className="blob-layer blob-peach" />
+        </div>
         <div className="mesh-blob blob-b" />
         <div className="mesh-blob blob-c" />
       </div>

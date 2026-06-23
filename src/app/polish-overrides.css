@@ -75,23 +75,61 @@
   right: -145px;
   width: min(1048px, 68vw);
   height: min(1048px, 68vw);
-  background: radial-gradient(
-    circle at 42% 46%,
-    #ffe066 0%,
-    #ff9a24 26%,
-    #ff6a1f 44%,
-    rgba(255, 74, 20, 0.5) 58%,
-    rgba(255, 74, 20, 0.22) 72%,
-    rgba(255, 69, 0, 0.08) 88%,
-    rgba(255, 69, 0, 0) 100%
-  );
-  /* --blob-hue: scroll-řízený posun odstínu (růžová→oranžová→modrá), nastavuje ScrollFX.
-     Fallback 0deg = původní oranžová (no-JS / reduced-motion beze změny).
-     BEZ blur: měnící se hue-rotate na rozmazaném elementu nutí přerastrovat blur každý
-     frame (sekání). Gradient je sám měkký, takže bez blur vypadá ~stejně, ale je levný. */
-  filter: hue-rotate(var(--blob-hue, 0deg));
   opacity: 0.92;
   animation: floatA 22s ease-in-out infinite;
+}
+
+/* Aurora jako 3 měkké RADIÁLNÍ GRADIENTY (růžová / světle modrá / broskvová) prolínané
+   opacitou dle scrollu (--au-*, nastavuje ScrollFX). Gradient dohasíná do průhledna →
+   ŽÁDNÝ tvrdý obrys (na rozdíl od bitmapy) a jemný blur navíc rozpustí okraj do ztracena.
+   Každá vrstva má statický obsah (gradient+blur se nemění, jen opacity) a je promovaná na
+   vlastní GPU vrstvu (will-change) → prolnutí přes opacity je čistě kompozitované = plynulý
+   scroll nahoru i dolů. Barvy jsou autorské (ne hue-rotate), takže sedí přesně. */
+.blob-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  filter: blur(20px);
+  will-change: opacity;
+}
+
+.blob-pink {
+  background: radial-gradient(
+    circle at 50% 46%,
+    #ffe3f4 0%,
+    #ff86d2 22%,
+    #ff35aa 42%,
+    rgba(255, 53, 170, 0.5) 58%,
+    rgba(255, 53, 170, 0.18) 72%,
+    rgba(255, 53, 170, 0) 85%
+  );
+  opacity: var(--au-pink, 1);
+}
+
+.blob-blue {
+  background: radial-gradient(
+    circle at 50% 46%,
+    #eaf7ff 0%,
+    #9bd6ff 22%,
+    #54aaff 42%,
+    rgba(84, 170, 255, 0.46) 58%,
+    rgba(84, 170, 255, 0.16) 72%,
+    rgba(84, 170, 255, 0) 85%
+  );
+  opacity: var(--au-blue, 0);
+}
+
+.blob-peach {
+  background: radial-gradient(
+    circle at 42% 44%,
+    #ffe066 0%,
+    #ff9a24 28%,
+    #ff6a1f 46%,
+    rgba(255, 74, 20, 0.52) 60%,
+    rgba(255, 74, 20, 0.2) 72%,
+    rgba(255, 69, 0, 0) 84%
+  );
+  opacity: var(--au-peach, 0);
 }
 
 .blob-b {
@@ -1706,11 +1744,23 @@ main {
   }
 
   /* hover nad klikatelným bez loga → výrazný prsten (silnější než tečka) */
-  .cursor.is-active:not(.has-media):not(.is-ball) {
+  .cursor.is-active:not(.has-media):not(.has-blur):not(.is-ball) {
     width: 42px;
     height: 42px;
     background: transparent;
     border: 1.5px solid #fff;
+  }
+
+  /* hover nad projektem → měkký „blur" disk (frosted sklo), ŽÁDNÉ logo.
+     mix-blend normal, aby backdrop-filter fungoval čistě (difference by ho rušil). */
+  .cursor.has-blur {
+    width: 96px;
+    height: 96px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    mix-blend-mode: normal;
   }
 
   /* hover nad prvkem s logem → ukáže logo, vypne difference (jinak by se invertovalo) */
@@ -1740,6 +1790,8 @@ main {
       rgba(255, 74, 20, 0) 78%
     );
     filter: hue-rotate(var(--blob-hue, 0deg));
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     mix-blend-mode: normal;
     opacity: 0.95;
   }
