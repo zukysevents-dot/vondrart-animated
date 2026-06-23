@@ -269,7 +269,10 @@ export function ScrollFX() {
       const vw = window.innerWidth;
       const max = Math.max(1, document.documentElement.scrollHeight - vh);
       const p = Math.min(1, Math.max(0, sy / max)); // 0..1 průběh scrollu
-      auroraTarget.tx = -Math.sin(p * Math.PI * 2) * (vw * 0.3); // houpání ±30vw, nejdřív výrazně doleva
+      // Houpání L↔R, ale ASYMETRICKY: výrazně DOLEVA (koule se line do plochy),
+      // jen jemně doprava (koule je ukotvená vpravo, doprava jen mizí z obrazu).
+      const sway = Math.sin(p * Math.PI * 2); // >0 v 1. půlce → doleva, <0 ve 2. → doprava
+      auroraTarget.tx = -sway * vw * (sway >= 0 ? 0.42 : 0.08);
       auroraTarget.ty = p * vh * 0.35; // jemný drift dolů s obsahem
       const dim = Math.min(1, Math.max(0, (sy - vh * 0.4) / (vh * 0.7)));
       auroraTarget.op = 1 - dim * 0.62; // 1 → ~0.38 (čitelnost obsahu)
