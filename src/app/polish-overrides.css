@@ -76,13 +76,14 @@
   width: min(1048px, 68vw);
   height: min(1048px, 68vw);
   background: radial-gradient(
-    circle at 42% 44%,
+    circle at 42% 46%,
     #ffe066 0%,
-    #ff9a24 28%,
-    #ff6a1f 46%,
-    rgba(255, 74, 20, 0.52) 60%,
-    rgba(255, 74, 20, 0.2) 72%,
-    rgba(255, 69, 0, 0) 84%
+    #ff9a24 26%,
+    #ff6a1f 44%,
+    rgba(255, 74, 20, 0.5) 58%,
+    rgba(255, 74, 20, 0.22) 72%,
+    rgba(255, 69, 0, 0.08) 88%,
+    rgba(255, 69, 0, 0) 100%
   );
   /* --blob-hue: scroll-řízený posun odstínu (růžová→oranžová→modrá), nastavuje ScrollFX.
      Fallback 0deg = původní oranžová (no-JS / reduced-motion beze změny).

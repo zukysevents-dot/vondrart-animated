@@ -242,14 +242,14 @@ export function ScrollFX() {
     // opakované nafukování/vyfukování, řízené scrollem. Cílové hodnoty
     // dotahujeme lerpem v samostatném rAF loopu → hedvábný pohyb i při
     // rychlém scrollu. Loop se po ustálení sám zastaví.
-    // BARVA KOULE PODLE SCROLLU — růžová (nahoře) → oranžová (střed) → modrá (dole),
-    // „po barevném spektru". Aplikuje se jako hue-rotate (CSS var --blob-hue) na hlavní
-    // kouli .blob-a (a intro kouli); base gradient je oranžová ~25°. Rotace roste
-    // monotónně → meziodstíny jdou přes červenou/žlutou/zelenou = spektrální přechod.
+    // BARVA KOULE PODLE SCROLLU — růžová (nahoře) → oranžová (střed) → světlá modrá (dole).
+    // hue-rotate (CSS var --blob-hue) na hlavní kouli .blob-a (a intro kouli); base
+    // gradient je oranžová ~25°. 1. půlka rotace STOUPÁ (růžová→červená→oranžová), 2. půlka
+    // KLESÁ (oranžová→magenta→fialová→modrá) → záměrně se VYHÝBÁ zelené. Vše ladí dohromady.
     // Hodnoty lze ladit (klient si může barvy doladit).
-    const HUE_TOP = 305; //  p=0   → růžová / magenta
-    const HUE_MID = 360; //  p=0.5 → oranžová (≡ 0°, bez posunu)
-    const HUE_BOTTOM = 550; // p=1  → modrá (přes žlutou/zelenou/azurovou)
+    const HUE_TOP = 305; //   p=0   → neon růžová (displayed ~330°)
+    const HUE_MID = 360; //   p=0.5 → oranžová (≡ 0°, bez posunu)
+    const HUE_BOTTOM = 190; // p=1  → světlá neon modrá (displayed ~215°), přes magentu/fialovou
     const scrollHue = (p: number) =>
       p <= 0.5
         ? HUE_TOP + (p / 0.5) * (HUE_MID - HUE_TOP)
@@ -267,7 +267,7 @@ export function ScrollFX() {
       const p = Math.min(1, Math.max(0, sy / max)); // 0..1 průběh scrollu
       // Pomalé, klidné houpání L↔R (1 cyklus přes celý web) + výrazné, pomalé
       // a dobře viditelné nafukování/vyfukování (dýchání).
-      auroraTarget.tx = -Math.sin(p * Math.PI * 2) * (vw * 0.2); // houpání ±20vw, nejdřív doleva
+      auroraTarget.tx = -Math.sin(p * Math.PI * 2) * (vw * 0.3); // houpání ±30vw, nejdřív výrazně doleva
       auroraTarget.ty = p * vh * 0.35; // jemný drift dolů s obsahem
       auroraTarget.sc = 1.18 + Math.sin(p * Math.PI * 3) * 0.34; // tep ~0.84–1.52×, pomalu
       const dim = Math.min(1, Math.max(0, (sy - vh * 0.4) / (vh * 0.7)));
