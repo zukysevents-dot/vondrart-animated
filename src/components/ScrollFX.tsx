@@ -266,7 +266,9 @@ export function ScrollFX() {
       auroraTarget.tx = -sway * vw * (sway >= 0 ? 0.42 : 0.08);
       auroraTarget.ty = p * vh * 0.35; // jemný drift dolů s obsahem
       const dim = Math.min(1, Math.max(0, (sy - vh * 0.4) / (vh * 0.7)));
-      auroraTarget.op = 1 - dim * 0.62; // 1 → ~0.38 (čitelnost obsahu)
+      // v obsahu zůstává čitelná (~0.5), v poslední části scrollu se ZTRÁCÍ do pozadí
+      const endFade = Math.min(1, Math.max(0, (p - 0.6) / 0.4));
+      auroraTarget.op = Math.max(0, 1 - dim * 0.5 - endFade * 0.45);
     };
     const auroraTick = () => {
       if (!aurora) return;
@@ -282,21 +284,8 @@ export function ScrollFX() {
         Math.abs(auroraTarget.op - auroraCurr.op) < 0.002;
       auroraRAF = settled ? 0 : window.requestAnimationFrame(auroraTick);
     };
-    // Prolnutí 3 bitmap aurory dle scrollu (mimo lerp smyčku). Opacity = kompozitované,
-    // takže levné; kvantujeme po malých krocích p, ať zbytečně nesypeme styly.
-    let lastP = -1;
-    const clamp01 = (x: number) => (x < 0 ? 0 : x > 1 ? 1 : x);
-    const updateAuroraColor = () => {
-      const vh = window.innerHeight;
-      const max = Math.max(1, document.documentElement.scrollHeight - vh);
-      const p = Math.min(1, Math.max(0, window.scrollY / max));
-      if (Math.abs(p - lastP) < 0.004) return;
-      lastP = p;
-      // trojúhelníkové prolnutí: růžová@0 → modrá@0.5 → broskvová@1
-      root.style.setProperty("--au-pink", clamp01(1 - 2 * p).toFixed(3));
-      root.style.setProperty("--au-blue", clamp01(1 - 2 * Math.abs(p - 0.5)).toFixed(3));
-      root.style.setProperty("--au-peach", clamp01(2 * p - 1).toFixed(3));
-    };
+    // Aurora má FIXNÍ barvu dle reference (magenta → oranžová) = jen .blob-pink
+    // (blob-blue/peach zůstávají na opacity 0). Žádné barevné prolnutí dle scrollu.
     const kickAurora = () => {
       if (!aurora || reduceMotion) return;
       computeAuroraTarget();
@@ -318,7 +307,6 @@ export function ScrollFX() {
       window.requestAnimationFrame(() => {
         applyParallax();
         kickAurora();
-        updateAuroraColor();
         ticking = false;
       });
     };
@@ -326,7 +314,6 @@ export function ScrollFX() {
     cleanups.push(() => window.removeEventListener("scroll", onScroll));
     applyParallax();
     kickAurora();
-    updateAuroraColor();
 
     /* --------------------- KURZOR: MAGNET + 3D TILT ------------------------ */
     document

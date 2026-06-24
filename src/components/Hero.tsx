@@ -8,7 +8,6 @@ export function Hero() {
           <span className="blob-layer blob-blue" />
           <span className="blob-layer blob-peach" />
         </div>
-        <div className="mesh-blob blob-b" />
         <div className="mesh-blob blob-c" />
       </div>
       <span className="hero-side-label" aria-hidden="true">

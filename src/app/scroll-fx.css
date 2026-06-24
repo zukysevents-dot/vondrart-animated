@@ -230,16 +230,18 @@ html.scroll-fx-ready .fx-tilt {
   width: min(360px, 56vw);
   aspect-ratio: 1;
   border-radius: 50%;
-  /* Stejný růžový gradient jako „top" stav aurory (.blob-pink) → FLIP přechod
+  /* Stejný referenční gradient jako aurora (.blob-pink) → FLIP přechod
      intro koule → .blob-a je bezešvý (identická barva i měkký okraj). */
   background: radial-gradient(
-    circle at 50% 46%,
-    #ffe3f4 0%,
-    #ff86d2 22%,
-    #ff35aa 42%,
-    rgba(255, 53, 170, 0.5) 58%,
-    rgba(255, 53, 170, 0.18) 72%,
-    rgba(255, 53, 170, 0) 85%
+    circle at 50% 42%,
+    #ff147a 0%,
+    #ff3d8a 18%,
+    #ff6360 38%,
+    #ff8a44 54%,
+    #ffa23a 66%,
+    rgba(255, 162, 58, 0.5) 75%,
+    rgba(255, 185, 120, 0.2) 85%,
+    rgba(255, 205, 165, 0) 93%
   );
   filter: blur(8px);
   opacity: 0;
