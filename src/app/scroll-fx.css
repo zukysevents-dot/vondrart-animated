@@ -177,6 +177,14 @@ html.scroll-fx-ready .fx-magnetic {
   will-change: transform;
 }
 
+/* E-mailová pilulka v kontaktu má .fx-magnetic (inline-block), což vyřadí
+   svislé centrování textu → vrátíme flex, ať je e-mail vycentrovaný. */
+html.scroll-fx-ready .contact-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 html.scroll-fx-ready .fx-tilt {
   transform-style: preserve-3d;
 }
