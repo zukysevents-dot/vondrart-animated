@@ -141,6 +141,8 @@ export function Projects() {
                   <img
                     className="project-card-image"
                     src={project.cardImage}
+                    width={project.cardImageWidth}
+                    height={project.cardImageHeight}
                     alt=""
                     decoding="async"
                     loading={isFirstRow ? "eager" : "lazy"}
@@ -150,6 +152,8 @@ export function Projects() {
                 <img
                   className="project-logo"
                   src={project.logo}
+                  width={project.logoWidth}
+                  height={project.logoHeight}
                   alt={`${project.name} logo`}
                   decoding="async"
                   loading={isFirstRow ? "eager" : "lazy"}

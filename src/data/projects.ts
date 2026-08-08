@@ -1,4 +1,8 @@
 export type Project = {
+  logoHeight?: number;
+  logoWidth?: number;
+  cardImageHeight?: number;
+  cardImageWidth?: number;
   id: string;
   overlayId: string;
   name: string;
@@ -42,8 +46,12 @@ export const projects: Project[] = [
       "Social Media"
     ],
     logo: "/images/bonghemia-logo.png",
+    logoWidth: 600,
+    logoHeight: 600,
     hero: "/images/bonghemia-lifestyle-visual.webp",
     cardImage: "/images/bonghemia-bongo.webp",
+    cardImageWidth: 1260,
+    cardImageHeight: 1888,
     palette: ["#131410", "#4e755f", "#fbb040", "#f2efe5"],
     gallery: [
       {
@@ -94,8 +102,12 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Logo System", "Visual System", "Social Media", "Web Design"],
     logo: "/images/dopamine-tour-logo.png",
+    logoWidth: 817,
+    logoHeight: 817,
     hero: "/images/dopamine-radnice.webp",
     cardImage: "/images/dopamine-tour-cover.webp",
+    cardImageWidth: 1400,
+    cardImageHeight: 984,
     palette: ["#fefaeb", "#73c9e6", "#5c5aa4", "#e84a94", "#0e101f"],
     gallery: [
       {
@@ -151,8 +163,12 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Logo System", "Visual System", "Social Media", "Brand Applications"],
     logo: "/images/syndikat-legal-logo.png",
+    logoWidth: 437,
+    logoHeight: 143,
     hero: "/images/syndikat-legal-desky.webp",
     cardImage: "/images/syndikat-legal-desky.webp",
+    cardImageWidth: 1400,
+    cardImageHeight: 919,
     palette: ["#072924", "#b9dcc6", "#eef5f1"],
     gallery: [
       {
@@ -193,8 +209,12 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Illustration", "Social Media"],
     logo: "/images/dvorek-logo.png",
+    logoWidth: 1496,
+    logoHeight: 421,
     hero: "/images/dvorek-brand.webp",
     cardImage: "/images/dvorek-card.webp",
+    cardImageWidth: 960,
+    cardImageHeight: 720,
     palette: ["#d2360f", "#fff4df", "#1d1d1b"],
     gallery: [
       {
@@ -240,8 +260,12 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Product Design", "Photography", "Collage", "Campaigns", "Social Media"],
     logo: "/images/houby-space-logo-v2.svg",
+    logoWidth: 295,
+    logoHeight: 163,
     hero: "/images/houby-space-lifestyle.webp",
     cardImage: "/images/houby-space-lifestyle.webp",
+    cardImageWidth: 1200,
+    cardImageHeight: 1500,
     palette: ["#4a6c5d", "#febc30", "#f4ecc4", "#f48dad"],
     gallery: [
       {
@@ -292,8 +316,12 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Illustration", "Social Media"],
     logo: "/images/cafe-olbracht-logo.png",
+    logoWidth: 264,
+    logoHeight: 324,
     hero: "/images/cafe-olbracht-main.webp",
     cardImage: "/images/cafe-olbracht-card.webp",
+    cardImageWidth: 960,
+    cardImageHeight: 720,
     palette: ["#fdf1d3", "#6a5652", "#cfdfbc", "#181818"],
     gallery: [
       {
@@ -334,8 +362,12 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Logo System", "Color System", "Campaigns"],
     logo: "/images/co-ty-ploty-logo.png",
+    logoWidth: 836,
+    logoHeight: 458,
     hero: "/images/co-ty-ploty-banner.webp",
     cardImage: "/images/co-ty-ploty-symbol-logo.png",
+    cardImageWidth: 836,
+    cardImageHeight: 458,
     palette: ["#f0ede4", "#004643"],
     gallery: [
       {

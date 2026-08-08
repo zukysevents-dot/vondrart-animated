@@ -113,7 +113,7 @@ export default function RootLayout({
         <div className="intro-curtain" aria-hidden="true">
           <div className="intro-orb" />
           {/* Logotyp ve firemním písmu (vektor) — nahrazuje dřívější HTML text. */}
-          <img className="intro-brand" src="/images/landing.svg" alt="" />
+          <img className="intro-brand" src="/images/landing.svg" alt="" width={761} height={260} />
         </div>
         <ScrollFX />
         {children}
