@@ -1287,6 +1287,21 @@ img {
   border-top: 1px solid rgba(244, 241, 235, 0.12);
   background: var(--ink);
   color: rgba(244, 241, 235, 0.72);
+  /* Zalomení kvůli druhému řádku s fakturačními údaji; první řádek
+     (značka + copyright) zůstává rozložený přesně jako dřív. */
+  flex-wrap: wrap;
+}
+
+/* Fakturační a zákonné údaje (§ 435 občanského zákoníku). */
+.site-footer .footer-legal {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(244, 241, 235, 0.12);
+  color: rgba(244, 241, 235, 0.48);
+  font-size: 0.76rem;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
 }
 
 @keyframes ticker {
