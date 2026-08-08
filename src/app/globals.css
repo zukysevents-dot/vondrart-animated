@@ -262,7 +262,8 @@ img {
   left: 24px;
   bottom: 72px;
   z-index: 2;
-  color: rgba(17, 17, 16, 0.38);
+  /* 0.38 dávalo kontrast 2,43:1 — pod WCAG AA (4,5:1). 0.60 dá 4,73:1. */
+  color: rgba(17, 17, 16, 0.6);
   font-size: 0.62rem;
   text-transform: uppercase;
   writing-mode: vertical-rl;
@@ -289,6 +290,21 @@ img {
   background: currentColor;
   transform-origin: top;
   animation: scrollLine 1.8s ease-in-out infinite;
+}
+
+/* Pravidlo výše cílí na oba spany uvnitř .scroll-cue, tedy i na ten se slovem
+   „Scroll“. Ten pak dostal šířku 1px, vlastní pozadí a pulzující scaleY —
+   vedle textu se proto vykreslovala druhá linka navíc a text ležel na vlastním
+   pozadí, což Lighthouse hlásil jako kontrast 2,29:1. Dekorativní má být jen
+   .scroll-line; text se vrací k normálnímu vykreslení. Barva zvednuta na
+   0.60 (4,73:1), linka si ponechává svůj původní odstín. */
+.scroll-cue .scroll-txt {
+  width: auto;
+  height: auto;
+  background: none;
+  transform: none;
+  animation: none;
+  color: rgba(17, 17, 16, 0.6);
 }
 
 .marquee {
