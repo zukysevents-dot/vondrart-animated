@@ -219,7 +219,7 @@ function DopamineDetail() {
             </div>
           </div>
           <div>
-            <img
+            <img width={1100} height={577}
               alt="Radnice a pražská architektura pro Dopamine Tour"
               className="dt-hero-photo"
               src="/images/dopamine-radnice.webp"
@@ -246,7 +246,7 @@ function DopamineDetail() {
           <div className="dt-num">02</div>
           <h3 className="dt-heading">Logo &amp; barevný systém</h3>
           <div className="dt-logo-gradient">
-            <img alt="Dopamine Tour logo" src="/images/dopamine-tour-logo.png" {...deferredImageProps} />
+            <img width={817} height={817} alt="Dopamine Tour logo" src="/images/dopamine-tour-logo.png" {...deferredImageProps} />
           </div>
           <div className="dt-palette">
             <div className="dt-swatch" style={{ background: "#FEFAEB", color: "#0E101F", border: "1px solid rgba(8,10,24,.10)" }}>
@@ -319,9 +319,9 @@ function DopamineDetail() {
           <div className="dt-num">05</div>
           <h3 className="dt-heading">Vizuální svět značky</h3>
           <div className="dt-small-photos">
-            <img alt="Prague visual" src="/images/dopamine-prague.webp" {...deferredImageProps} />
-            <img alt="Žižkov Tower visual" src="/images/dopamine-tower.webp" {...deferredImageProps} />
-            <img alt="Dopamine Tour moment" src="/images/dopamine-tour-moment.webp" {...deferredImageProps} />
+            <img width={900} height={1350} alt="Prague visual" src="/images/dopamine-prague.webp" {...deferredImageProps} />
+            <img width={900} height={1130} alt="Žižkov Tower visual" src="/images/dopamine-tower.webp" {...deferredImageProps} />
+            <img width={900} height={1349} alt="Dopamine Tour moment" src="/images/dopamine-tour-moment.webp" {...deferredImageProps} />
           </div>
         </section>
         <hr className="dt-rule" />
@@ -336,12 +336,12 @@ function DopamineDetail() {
           </div>
         </section>
         <div className="dt-social-grid">
-          <img alt="Five senses" src="/images/dopamine-five-senses.webp" {...deferredImageProps} />
-          <img alt="Sight" src="/images/dopamine-sight.webp" {...deferredImageProps} />
-          <img alt="Sound" src="/images/dopamine-sound.webp" {...deferredImageProps} />
-          <img alt="Scent" src="/images/dopamine-scent.webp" {...deferredImageProps} />
-          <img alt="Touch" src="/images/dopamine-touch.webp" {...deferredImageProps} />
-          <img alt="Book your dopamine hit" src="/images/dopamine-book-your-hit.webp" {...deferredImageProps} />
+          <img width={760} height={950} alt="Five senses" src="/images/dopamine-five-senses.webp" {...deferredImageProps} />
+          <img width={760} height={950} alt="Sight" src="/images/dopamine-sight.webp" {...deferredImageProps} />
+          <img width={760} height={950} alt="Sound" src="/images/dopamine-sound.webp" {...deferredImageProps} />
+          <img width={760} height={950} alt="Scent" src="/images/dopamine-scent.webp" {...deferredImageProps} />
+          <img width={760} height={950} alt="Touch" src="/images/dopamine-touch.webp" {...deferredImageProps} />
+          <img width={760} height={950} alt="Book your dopamine hit" src="/images/dopamine-book-your-hit.webp" {...deferredImageProps} />
         </div>
         <hr className="dt-rule" />
         <section className="dt-closing">
@@ -353,7 +353,7 @@ function DopamineDetail() {
             </h3>
             <p>Výsledkem je výrazná vizuální identita pro turistickou tour, která nepůsobí jako klasický sightseeing produkt, ale jako současná městská experience značka.</p>
           </div>
-          <img alt="Dopamine Tour logo" src="/images/dopamine-tour-logo.png" {...deferredImageProps} />
+          <img width={817} height={817} alt="Dopamine Tour logo" src="/images/dopamine-tour-logo.png" {...deferredImageProps} />
         </section>
       </div>
     </div>
@@ -379,7 +379,7 @@ function SyndikatDetail() {
           </div>
           <div>
             <div className="sl-hero-card">
-              <img alt="syndikat.legal desky" src="/images/syndikat-legal-desky.webp" {...deferredImageProps} />
+              <img width={1400} height={919} alt="syndikat.legal desky" src="/images/syndikat-legal-desky.webp" {...deferredImageProps} />
             </div>
             <div className="sl-meta">
               <div>
@@ -419,8 +419,8 @@ function SyndikatDetail() {
             </div>
           </div>
           <div className="sl-logo-row sl-logo-row--brandboard">
-            <img alt="syndikat.legal logo na světle zeleném podkladu" src="/images/syndikat-legal-logo-light.webp" {...deferredImageProps} />
-            <img alt="syndikat.legal logo na tmavém podkladu" src="/images/syndikat-legal-logo-dark.webp" {...deferredImageProps} />
+            <img width={1034} height={341} alt="syndikat.legal logo na světle zeleném podkladu" src="/images/syndikat-legal-logo-light.webp" {...deferredImageProps} />
+            <img width={1034} height={341} alt="syndikat.legal logo na tmavém podkladu" src="/images/syndikat-legal-logo-dark.webp" {...deferredImageProps} />
           </div>
         </section>
         <hr className="sl-rule" />
@@ -446,9 +446,9 @@ function SyndikatDetail() {
           <div className="sl-num">04</div>
           <h3 className="sl-heading">Vizuální aplikace</h3>
           <div className="sl-visual-grid">
-            <img alt="syndikat.legal vizuál právní jistota" src="/images/syndikat-legal-pravni-jistota.webp" {...deferredImageProps} />
-            <img alt="syndikat.legal vizuál zablokovaný Instagram účet" src="/images/syndikat-legal-instagram.webp" {...deferredImageProps} />
-            <img alt="syndikat.legal vizuál poradenství v regulovaných trzích" src="/images/syndikat-legal-poradenstvi.webp" {...deferredImageProps} />
+            <img width={1080} height={1350} alt="syndikat.legal vizuál právní jistota" src="/images/syndikat-legal-pravni-jistota.webp" {...deferredImageProps} />
+            <img width={1080} height={1350} alt="syndikat.legal vizuál zablokovaný Instagram účet" src="/images/syndikat-legal-instagram.webp" {...deferredImageProps} />
+            <img width={1080} height={1350} alt="syndikat.legal vizuál poradenství v regulovaných trzích" src="/images/syndikat-legal-poradenstvi.webp" {...deferredImageProps} />
           </div>
         </section>
         <hr className="sl-rule" />
@@ -468,7 +468,7 @@ function SyndikatDetail() {
             <h3>Moderní právo bez starého divadla.</h3>
             <p>Vizuální identita pro právní firmu, která chce působit odborně, současně a jasně rozpoznatelně — bez klišé klasických advokátních kanceláří.</p>
           </div>
-          <img alt="syndikat.legal logo" src="/images/syndikat-legal-logo.png" {...deferredImageProps} />
+          <img width={437} height={143} alt="syndikat.legal logo" src="/images/syndikat-legal-logo.png" {...deferredImageProps} />
         </section>
       </div>
     </div>
@@ -495,13 +495,13 @@ function DvorekDetail() {
             <div className="dv-hero-card">
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px", alignItems: "end" }}>
                 <div style={{ background: "#d2360f", borderRadius: "18px", padding: "16px" }}>
-                  <img alt="" src="/images/dvorek-kettle.png" {...deferredImageProps} />
+                  <img width={338} height={404} alt="" src="/images/dvorek-kettle.png" {...deferredImageProps} />
                 </div>
                 <div style={{ background: "#d2360f", borderRadius: "18px", padding: "16px" }}>
-                  <img alt="" src="/images/dvorek-character.png" {...deferredImageProps} />
+                  <img width={402} height={424} alt="" src="/images/dvorek-character.png" {...deferredImageProps} />
                 </div>
                 <div style={{ background: "#d2360f", borderRadius: "18px", padding: "16px" }}>
-                  <img alt="" src="/images/dvorek-latte.png" {...deferredImageProps} />
+                  <img width={396} height={352} alt="" src="/images/dvorek-latte.png" {...deferredImageProps} />
                 </div>
               </div>
             </div>
@@ -526,7 +526,7 @@ function DvorekDetail() {
           <div className="dv-num">02</div>
           <h3 className="dv-heading">Logo &amp; barevný systém</h3>
           <div className="dv-logo-panel">
-            <img alt="Dvorek logo" className="dv-logo-fixed" src="/images/dvorek-logo.png" {...deferredImageProps} />
+            <img width={1496} height={421} alt="Dvorek logo" className="dv-logo-fixed" src="/images/dvorek-logo.png" {...deferredImageProps} />
           </div>
           <div className="dv-palette">
             <div className="dv-swatch" style={{ background: "#d2360f", color: "#fff4df" }}>
@@ -577,19 +577,19 @@ function DvorekDetail() {
         </section>
         <div className="dv-icons">
           <div className="dv-icon-card">
-            <img alt="Dvorek konvice" src="/images/dvorek-kettle.png" {...deferredImageProps} />
+            <img width={338} height={404} alt="Dvorek konvice" src="/images/dvorek-kettle.png" {...deferredImageProps} />
           </div>
           <div className="dv-icon-card">
-            <img alt="Dvorek postava s hrnkem" src="/images/dvorek-character.png" {...deferredImageProps} />
+            <img width={402} height={424} alt="Dvorek postava s hrnkem" src="/images/dvorek-character.png" {...deferredImageProps} />
           </div>
           <div className="dv-icon-card">
-            <img alt="Dvorek latte" src="/images/dvorek-latte.png" {...deferredImageProps} />
+            <img width={396} height={352} alt="Dvorek latte" src="/images/dvorek-latte.png" {...deferredImageProps} />
           </div>
           <div className="dv-icon-card">
-            <img alt="Dvorek hrnek" src="/images/dvorek-mug.png" {...deferredImageProps} />
+            <img width={440} height={368} alt="Dvorek hrnek" src="/images/dvorek-mug.png" {...deferredImageProps} />
           </div>
           <div className="dv-icon-card">
-            <img alt="Dvorek sandwich" src="/images/dvorek-sandwich.png" {...deferredImageProps} />
+            <img width={422} height={336} alt="Dvorek sandwich" src="/images/dvorek-sandwich.png" {...deferredImageProps} />
           </div>
         </div>
         <hr className="dv-rule" />
@@ -597,9 +597,9 @@ function DvorekDetail() {
           <div className="dv-num">05</div>
           <h3 className="dv-heading">Vizuální aplikace</h3>
           <div className="dv-visual-grid">
-            <img alt="Dvorek menu" src="/images/dvorek-menu.webp" {...deferredImageProps} />
-            <img alt="Dvorek věrnostní kartička" src="/images/dvorek-loyalty-card.webp" {...deferredImageProps} />
-            <img alt="Dvorek vzor s kelímkem" src="/images/dvorek-cup-pattern.png" {...deferredImageProps} />
+            <img width={1085} height={1046} alt="Dvorek menu" src="/images/dvorek-menu.webp" {...deferredImageProps} />
+            <img width={1010} height={665} alt="Dvorek věrnostní kartička" src="/images/dvorek-loyalty-card.webp" {...deferredImageProps} />
+            <img width={980} height={646} alt="Dvorek vzor s kelímkem" src="/images/dvorek-cup-pattern.png" {...deferredImageProps} />
           </div>
         </section>
         <hr className="dv-rule" />
@@ -618,7 +618,7 @@ function DvorekDetail() {
             <h3>Espresso bar, který si zapamatuješ.</h3>
             <p>Výsledkem je hravá a výrazná identita pro lokální café &amp; bistro značku — bez sterilního minimalismu, s vlastním rukopisem a silnou vizuální energií.</p>
           </div>
-          <img alt="Dvorek ilustrace" src="/images/dvorek-illustration.png" {...deferredImageProps} />
+          <img width={440} height={368} alt="Dvorek ilustrace" src="/images/dvorek-illustration.png" {...deferredImageProps} />
         </section>
       </div>
     </div>
@@ -650,7 +650,7 @@ function HoubyDetail() {
           </div>
           <div>
             <div className="hb-hero-card">
-              <img alt="houby.space lifestyle vizuál" src="/images/houby-space-lifestyle.webp" {...deferredImageProps} />
+              <img width={1200} height={1500} alt="houby.space lifestyle vizuál" src="/images/houby-space-lifestyle.webp" {...deferredImageProps} />
             </div>
             <div className="hb-meta">
               <div>
@@ -673,7 +673,7 @@ function HoubyDetail() {
           <div className="hb-num">02</div>
           <h3 className="hb-heading">Logo &amp; barevný systém</h3>
           <div className="hb-logo-panel">
-            <img className="hb-logo-v2" alt="Houby.space logo" src="/images/houby-space-logo-v2.svg" {...deferredImageProps} />
+            <img width={295} height={163} className="hb-logo-v2" alt="Houby.space logo" src="/images/houby-space-logo-v2.svg" {...deferredImageProps} />
           </div>
           <div className="hb-palette">
             <div className="hb-swatch" style={{ background: "#FEBC30", color: "#4A6C5D" }}>
@@ -728,19 +728,19 @@ function HoubyDetail() {
           </div>
         </section>
         <div className="hb-photo-grid">
-          <img alt="houby.space cloud visual" src="/images/houby-space-cloud.webp" {...deferredImageProps} />
-          <img alt="houby.space hoodie visual" src="/images/houby-space-hoodie.webp" {...deferredImageProps} />
-          <img alt="houby.space city visual" src="/images/houby-space-city.webp" {...deferredImageProps} />
-          <img alt="houby.space palm visual" src="/images/houby-space-palm.webp" {...deferredImageProps} />
+          <img width={1200} height={1500} alt="houby.space cloud visual" src="/images/houby-space-cloud.webp" {...deferredImageProps} />
+          <img width={1200} height={1600} alt="houby.space hoodie visual" src="/images/houby-space-hoodie.webp" {...deferredImageProps} />
+          <img width={1200} height={1500} alt="houby.space city visual" src="/images/houby-space-city.webp" {...deferredImageProps} />
+          <img width={1200} height={1618} alt="houby.space palm visual" src="/images/houby-space-palm.webp" {...deferredImageProps} />
         </div>
         <hr className="hb-rule" />
         <section>
           <div className="hb-num">05</div>
           <h3 className="hb-heading">Merch &amp; obaly</h3>
           <div className="hb-pack-grid">
-            <img alt="houby.space packaging redesign" src="/images/houby-space-packaging.webp" {...deferredImageProps} />
-            <img alt="houby.space t-shirt" src="/images/houby-space-shirt.webp" {...deferredImageProps} />
-            <img alt="houby.space product bottle" src="/images/houby-space-bottle.webp" {...deferredImageProps} />
+            <img width={1200} height={900} alt="houby.space packaging redesign" src="/images/houby-space-packaging.webp" {...deferredImageProps} />
+            <img width={1024} height={1280} alt="houby.space t-shirt" src="/images/houby-space-shirt.webp" {...deferredImageProps} />
+            <img width={1012} height={1012} alt="houby.space product bottle" src="/images/houby-space-bottle.webp" {...deferredImageProps} />
           </div>
         </section>
         <hr className="hb-rule" />
@@ -753,7 +753,7 @@ function HoubyDetail() {
             </h3>
             <p>Výsledkem je výrazný lifestyle svět, který propojuje produkt, merch a vizuální komunikaci do jedné psychedelické značkové zkušenosti.</p>
           </div>
-          <img alt="houby.space logo" src="/images/houby-space-logo-v2.svg" {...deferredImageProps} />
+          <img width={295} height={163} alt="houby.space logo" src="/images/houby-space-logo-v2.svg" {...deferredImageProps} />
         </section>
       </div>
     </div>
@@ -786,7 +786,7 @@ function OlbrachtDetail() {
           </div>
           <div>
             <div className="ob-hero-image">
-              <img alt="Café Olbracht" src="/images/cafe-olbracht-main.webp" {...deferredImageProps} />
+              <img width={897} height={1196} alt="Café Olbracht" src="/images/cafe-olbracht-main.webp" {...deferredImageProps} />
             </div>
             <div className="ob-meta">
               <div>
@@ -852,7 +852,7 @@ function OlbrachtDetail() {
           <h3 className="ob-heading">Logo &amp; systém</h3>
           <div className="ob-logo-system">
             <div className="ob-logo-panel ob-logo-panel-yellow ob-logo-panel-single">
-              <img alt="Café Olbracht žluté logo" src="/images/cafe-olbracht-logo.png" {...deferredImageProps} />
+              <img width={264} height={324} alt="Café Olbracht žluté logo" src="/images/cafe-olbracht-logo.png" {...deferredImageProps} />
             </div>
             <div>
               <div className="ob-copy ob-logo-copy" style={{ marginTop: "22px", maxWidth: "720px" }}>
@@ -867,10 +867,10 @@ function OlbrachtDetail() {
           <h3 className="ob-heading">Aplikace identity</h3>
           <div className="ob-apps">
             <div className="ob-app-card">
-              <img alt="Café Olbracht zástěry" src="/images/cafe-olbracht-aprons.webp" {...deferredImageProps} />
+              <img width={2048} height={1365} alt="Café Olbracht zástěry" src="/images/cafe-olbracht-aprons.webp" {...deferredImageProps} />
             </div>
             <div className="ob-app-card">
-              <img alt="Café Olbracht kelímek" src="/images/cafe-olbracht-cup.webp" {...deferredImageProps} />
+              <img width={2048} height={1337} alt="Café Olbracht kelímek" src="/images/cafe-olbracht-cup.webp" {...deferredImageProps} />
             </div>
           </div>
         </section>
@@ -879,9 +879,9 @@ function OlbrachtDetail() {
           <div className="ob-num">06</div>
           <h3 className="ob-heading">Fotky provozu</h3>
           <div className="ob-photo-grid">
-            <img alt="Café Olbracht provoz" src="/images/cafe-olbracht-interior.webp" {...deferredImageProps} />
-            <img alt="Café Olbracht provoz" src="/images/cafe-olbracht-service.webp" {...deferredImageProps} />
-            <img alt="Café Olbracht provoz" src="/images/cafe-olbracht-main.webp" {...deferredImageProps} />
+            <img width={932} height={797} alt="Café Olbracht provoz" src="/images/cafe-olbracht-interior.webp" {...deferredImageProps} />
+            <img width={400} height={533} alt="Café Olbracht provoz" src="/images/cafe-olbracht-service.webp" {...deferredImageProps} />
+            <img width={897} height={1196} alt="Café Olbracht provoz" src="/images/cafe-olbracht-main.webp" {...deferredImageProps} />
           </div>
           <p className="ob-photo-final-text">Lokální kavárna s vlastním rytmem. Výsledkem je vizuální identita připravená pro každodenní provoz — od loga přes typografii až po drobné aplikace značky.</p>
         </section>
@@ -916,7 +916,7 @@ function CotyplotyDetail() {
           </div>
           <div>
             <div className="cp-hero-card">
-              <img alt="Co ty ploty logo" src="/images/co-ty-ploty-logo.png" {...deferredImageProps} />
+              <img width={836} height={458} alt="Co ty ploty logo" src="/images/co-ty-ploty-logo.png" {...deferredImageProps} />
             </div>
             <div className="cp-meta">
               <div>
@@ -955,10 +955,10 @@ function CotyplotyDetail() {
           <h3 className="cp-heading">Logo &amp; barevný systém</h3>
           <div className="cp-logo-showcase">
             <div className="cp-logo-card cp-logo-card--mark">
-              <img alt="Co ty ploty symbol logo" src="/images/co-ty-ploty-symbol-logo.png" {...deferredImageProps} />
+              <img width={836} height={458} alt="Co ty ploty symbol logo" src="/images/co-ty-ploty-symbol-logo.png" {...deferredImageProps} />
             </div>
             <div className="cp-logo-card cp-logo-card--horizontal">
-              <img alt="Co ty ploty vodorovné logo" src="/images/co-ty-ploty-horizontal-logo.png" {...deferredImageProps} />
+              <img width={1474} height={454} alt="Co ty ploty vodorovné logo" src="/images/co-ty-ploty-horizontal-logo.png" {...deferredImageProps} />
             </div>
           </div>
           <div className="cp-palette-built">
@@ -989,7 +989,7 @@ function CotyplotyDetail() {
           <h3 className="cp-heading">Připravené pro reklamy</h3>
           <div className="cp-ad-layout">
             <div className="cp-ad-card">
-              <img alt="Ukázka reklamního banneru Co ty ploty" src="/images/co-ty-ploty-banner.webp" {...deferredImageProps} />
+              <img width={1350} height={1350} alt="Ukázka reklamního banneru Co ty ploty" src="/images/co-ty-ploty-banner.webp" {...deferredImageProps} />
             </div>
             <div className="cp-ad-copy">
               <h4>Rychle pochopitelné sdělení pro výkon.</h4>
@@ -1003,7 +1003,7 @@ function CotyplotyDetail() {
             <h3>Plot na klíč. Bez zbytečných komplikací.</h3>
             <p>Výsledkem je přímočará identita pro službu, která má být jasná hned na první pohled.</p>
           </div>
-          <img alt="Co ty ploty symbol" src="/images/co-ty-ploty-symbol.png" {...deferredImageProps} />
+          <img width={836} height={458} alt="Co ty ploty symbol" src="/images/co-ty-ploty-symbol.png" {...deferredImageProps} />
         </section>
       </div>
     </div>
@@ -1024,7 +1024,7 @@ function BonghemiaDetail() {
           <div>
             <p className="bng-kicker">Branding · Creative Direction</p>
             <div className="bng-hero-logo-wrap">
-              <img alt="Bonghemia logo" className="bng-hero-logo bng-hero-logo--pdf" src="/images/bonghemia-logo.png" {...deferredImageProps} />
+              <img width={600} height={600} alt="Bonghemia logo" className="bng-hero-logo bng-hero-logo--pdf" src="/images/bonghemia-logo.png" {...deferredImageProps} />
             </div>
             <p className="bng-lead">Značka, kterou jsme spoluzaložili, abychom spojovali konopnou komunitu, bourali stereotypy a ukázali, že komunikace kolem konopí může být chytrá, vtipná, otevřená a fér.</p>
             <div className="bng-tags">
@@ -1038,7 +1038,7 @@ function BonghemiaDetail() {
           </div>
           <aside className="bng-visual">
             <div className="bng-image">
-              <img alt="Bonghemia lifestyle visual" src="/images/bonghemia-lifestyle-visual.webp" {...deferredImageProps} />
+              <img width={1638} height={2048} alt="Bonghemia lifestyle visual" src="/images/bonghemia-lifestyle-visual.webp" {...deferredImageProps} />
             </div>
           </aside>
         </section>
@@ -1089,7 +1089,7 @@ function BonghemiaDetail() {
               <div className="bng-slogan">JOINT US!</div>
               <div className="bng-slogan">Bojujeme proti beztráví</div>
               <figure className="bng-shot bng-shot--slogan-photo">
-                <img alt="JOINT US merch" src="/images/bonghemia-joint-us-merch.webp" {...deferredImageProps} />
+                <img width={973} height={1297} alt="JOINT US merch" src="/images/bonghemia-joint-us-merch.webp" {...deferredImageProps} />
                 <figcaption>JOINT US merch</figcaption>
               </figure>
               <div className="bng-slogan">Naše palivo nezdražuje</div>
@@ -1109,7 +1109,7 @@ function BonghemiaDetail() {
                 <span>Charitativní projekt navázaný na hodnotu srdíčko. Aktuálně Bonghemia adoptovala bongo horského v Safari Parku Dvůr Králové.</span>
               </div>
               <figure className="bng-bongo-figure">
-                <img alt="Bonghemia Pomáhá — bongo horský" src="/images/bonghemia-bongo.webp" {...deferredImageProps} />
+                <img width={1260} height={1888} alt="Bonghemia Pomáhá — bongo horský" src="/images/bonghemia-bongo.webp" {...deferredImageProps} />
                 <figcaption>Bongo horský · Safari Park Dvůr Králové</figcaption>
               </figure>
               <div className="bng-project bng-project--label">
@@ -1147,23 +1147,23 @@ function BonghemiaDetail() {
           </div>
           <div className="bng-system-grid">
             <figure className="bng-shot bng-product-main">
-              <img alt="Kratom packaging" src="/images/bonghemia-kratom-packaging.webp" {...deferredImageProps} />
+              <img width={1758} height={1173} alt="Kratom packaging" src="/images/bonghemia-kratom-packaging.webp" {...deferredImageProps} />
               <figcaption>Kratom packaging</figcaption>
             </figure>
             <figure className="bng-shot bng-product-side">
-              <img alt="Product kit" src="/images/bonghemia-product-kit.webp" {...deferredImageProps} />
+              <img width={1680} height={1260} alt="Product kit" src="/images/bonghemia-product-kit.webp" {...deferredImageProps} />
               <figcaption>Product kit</figcaption>
             </figure>
             <figure className="bng-shot bng-product-small">
-              <img alt="Cartridge packaging" src="/images/bonghemia-cartridge-packaging.jpg" {...deferredImageProps} />
+              <img width={1590} height={1192} alt="Cartridge packaging" src="/images/bonghemia-cartridge-packaging.jpg" {...deferredImageProps} />
               <figcaption>Cartridge packaging</figcaption>
             </figure>
             <figure className="bng-shot bng-product-small">
-              <img alt="Gummies packaging" src="/images/bonghemia-gummies-packaging.jpg" {...deferredImageProps} />
+              <img width={1650} height={1237} alt="Gummies packaging" src="/images/bonghemia-gummies-packaging.jpg" {...deferredImageProps} />
               <figcaption>Gummies packaging</figcaption>
             </figure>
             <figure className="bng-shot bng-product-small">
-              <img alt="CBD oil packaging" src="/images/bonghemia-cbd-oil-packaging.webp" {...deferredImageProps} />
+              <img width={1362} height={1021} alt="CBD oil packaging" src="/images/bonghemia-cbd-oil-packaging.webp" {...deferredImageProps} />
               <figcaption>CBD oil packaging</figcaption>
             </figure>
             <div className="bng-lifestyle-title">
@@ -1174,19 +1174,19 @@ function BonghemiaDetail() {
               </div>
             </div>
             <figure className="bng-shot bng-life-wide">
-              <img alt="Grow lifestyle" src="/images/bonghemia-grow-lifestyle.webp" {...deferredImageProps} />
+              <img width={1888} height={1260} alt="Grow lifestyle" src="/images/bonghemia-grow-lifestyle.webp" {...deferredImageProps} />
               <figcaption>Grow lifestyle</figcaption>
             </figure>
             <figure className="bng-shot bng-life-tall">
-              <img alt="Lifestyle photography" src="/images/bonghemia-lifestyle-photography.jpg" {...deferredImageProps} />
+              <img width={1801} height={1202} alt="Lifestyle photography" src="/images/bonghemia-lifestyle-photography.jpg" {...deferredImageProps} />
               <figcaption>Lifestyle photography</figcaption>
             </figure>
             <figure className="bng-shot bng-life-half">
-              <img alt="Bojujeme proti beztráví" src="/images/bonghemia-beztravi.webp" {...deferredImageProps} />
+              <img width={1811} height={1208} alt="Bojujeme proti beztráví" src="/images/bonghemia-beztravi.webp" {...deferredImageProps} />
               <figcaption>Bojujeme proti beztráví</figcaption>
             </figure>
             <figure className="bng-shot bng-life-third">
-              <img alt="JOINT US merch" src="/images/bonghemia-joint-us-merch.webp" {...deferredImageProps} />
+              <img width={973} height={1297} alt="JOINT US merch" src="/images/bonghemia-joint-us-merch.webp" {...deferredImageProps} />
               <figcaption>JOINT US merch</figcaption>
             </figure>
           </div>
@@ -1198,7 +1198,7 @@ function BonghemiaDetail() {
               <br />
               US!
             </b>
-            <img alt="Bonghemia vertical logo" className="bng-footer-logo" src="/images/bonghemia-vertical-logo.png" {...deferredImageProps} />
+            <img width={2048} height={516} alt="Bonghemia vertical logo" className="bng-footer-logo" src="/images/bonghemia-vertical-logo.png" {...deferredImageProps} />
           </div>
           <p>Bonghemia je dlouhodobě vedený brand systém — od hodnot a tónu komunikace až po každodenní kreativní exekuci.</p>
         </footer>
