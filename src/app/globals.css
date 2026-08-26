@@ -1092,7 +1092,7 @@ img {
 .collabs-grid,
 .illustrations-track {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -1147,12 +1147,6 @@ img {
   border-radius: 999px;
   font-size: 1rem;
   text-transform: uppercase;
-}
-
-.collab-spolek .collab-logo {
-  font-family: Georgia, serif;
-  font-size: 2.8rem;
-  font-weight: 700;
 }
 
 .collab-mascotte .collab-logo {

@@ -8,9 +8,6 @@ const collaborations = [
   { name: "Crosskeys Towing", scope: "Redesign loga · USA", variant: "crosskeys", logo: "/images/collab-crosskeys.png",
     width: 1280,
     height: 946 },
-  { name: "Kavárna Spolek", scope: "Socials · Grafika", variant: "spolek", logo: "/images/collab-spolek.svg",
-    width: 734,
-    height: 269 },
   { name: "Mascotte", scope: "Foto služby", variant: "mascotte", logo: "/images/collab-mascotte.svg",
     width: 1400,
     height: 200 }
