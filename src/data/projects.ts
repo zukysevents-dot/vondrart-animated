@@ -75,7 +75,7 @@ export const projects: Project[] = [
         caption: "Lifestyle fotografie"
       },
       {
-        src: "/images/bonghemia-cbd-oil-packaging.webp",
+        src: "/images/bonghemia-cbd-oil-packaging-v2.webp",
         alt: "Bonghemia CBD oil packaging",
         caption: "Packaging"
       },
@@ -284,7 +284,7 @@ export const projects: Project[] = [
         caption: "City visual"
       },
       {
-        src: "/images/houby-space-packaging.webp",
+        src: "/images/houby-space-packaging-v2.webp",
         alt: "houby.space packaging redesign",
         caption: "Packaging"
       },

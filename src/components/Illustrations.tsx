@@ -24,6 +24,12 @@ const illustrations = [
     height: 2000
   },
   {
+    caption: "Swap & Sip — Espresso.bar",
+    image: "/images/illustration-swap-sip-espresso.webp",
+    width: 1080,
+    height: 1350
+  },
+  {
     caption: "Barvy & Beaty",
     image: "/images/illustration-barvy-beaty.webp",
     width: 1414,

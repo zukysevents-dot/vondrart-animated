@@ -742,7 +742,7 @@ function HoubyDetail() {
           <div className="hb-num">05</div>
           <h3 className="hb-heading">Merch &amp; obaly</h3>
           <div className="hb-pack-grid">
-            <img width={1200} height={900} alt="houby.space packaging redesign" src="/images/houby-space-packaging.webp" {...deferredImageProps} />
+            <img width={1200} height={1558} alt="houby.space packaging redesign" src="/images/houby-space-packaging-v2.webp" {...deferredImageProps} />
             <img width={1024} height={1280} alt="houby.space t-shirt" src="/images/houby-space-shirt.webp" {...deferredImageProps} />
             <img width={1012} height={1012} alt="houby.space product bottle" src="/images/houby-space-bottle.webp" {...deferredImageProps} />
           </div>
@@ -1030,7 +1030,7 @@ function BonghemiaDetail() {
             <div className="bng-hero-logo-wrap">
               <img width={600} height={600} alt="Bonghemia logo" className="bng-hero-logo bng-hero-logo--pdf" src="/images/bonghemia-logo.png" {...deferredImageProps} />
             </div>
-            <p className="bng-lead">Značka, kterou jsme spoluzaložili, abychom spojovali konopnou komunitu, bourali stereotypy a ukázali, že komunikace kolem konopí může být chytrá, vtipná, otevřená a fér.</p>
+            <p className="bng-lead">Dali jsme život a duši značce, která měla spojovat konopnou komunitu, bourat stereotypy a ukázat, že komunikace kolem konopí může být chytrá, vtipná, otevřená, ale na úrovni.</p>
             <div className="bng-tags">
               <span>Brand Strategy</span>
               <span>Creative Direction</span>
@@ -1163,11 +1163,11 @@ function BonghemiaDetail() {
               <figcaption>Cartridge packaging</figcaption>
             </figure>
             <figure className="bng-shot bng-product-small">
-              <img width={1650} height={1237} alt="Gummies packaging" src="/images/bonghemia-gummies-packaging.jpg" {...deferredImageProps} />
+              <img width={1600} height={1200} alt="Gummies packaging" src="/images/bonghemia-gummies-packaging-v2.webp" {...deferredImageProps} />
               <figcaption>Gummies packaging</figcaption>
             </figure>
             <figure className="bng-shot bng-product-small">
-              <img width={1362} height={1021} alt="CBD oil packaging" src="/images/bonghemia-cbd-oil-packaging.webp" {...deferredImageProps} />
+              <img width={1600} height={1200} alt="CBD oil packaging" src="/images/bonghemia-cbd-oil-packaging-v2.webp" {...deferredImageProps} />
               <figcaption>CBD oil packaging</figcaption>
             </figure>
             <div className="bng-lifestyle-title">
